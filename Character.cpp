@@ -25,7 +25,7 @@ void Character::displayStats() const {
     std::cout << "===== Character Details =====" << std::endl;
     std::cout << "Character Name: " << name << std::endl;
     std::cout << "Character Health (" << health << "/" << totalHealth << "): " << std::endl;
-    Character::healthBarMaker();
+    healthBarMaker();
     std::cout << "Character Attack Damage: " << attkDamage << std::endl;
 }
 
@@ -49,7 +49,7 @@ void Character::healthBarMaker() const {
     int fullSection = (health/totalHealth)*10;
     int emptyStection = 10 - fullSection;
 
-    std::cout << "[";
+    std::cout << "  [";
     for(int i=0; i<fullSection; i++){
         std::cout << "=";
     }
