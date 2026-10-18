@@ -5,3 +5,6 @@
 # Compiled object files
 *.o
 *.obj
+
+# Test Cpp File
+test.cpp
