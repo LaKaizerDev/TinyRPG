@@ -7,6 +7,7 @@ class Character{
         int attkDamage;
         int health;
         int const totalHealth;
+        bool isBlocking = false;
     
     public:
         Character(std::string name, int health, int attkDamage) : name(name), health(health), attkDamage(attkDamage) , totalHealth(health) {}
@@ -28,6 +29,8 @@ class Character{
        bool isAlive() const ;
 
        void attack(Character& enemy);
+
+       void toggleBlock();
 
        void healthBarMaker() const;
 

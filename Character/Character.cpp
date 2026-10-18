@@ -33,6 +33,10 @@ void Character::takeDamage (int damage){
     if (damage<0){
         std::cout << "Invalid Damage" << std::endl;
     }
+    else if (isBlocking){
+        this->health = (health-(damage/5) >= 0) ? (health-(damage/5)) : (0);
+        toggleBlock();
+    }
     else{
         this->health = (health-damage >= 0) ? (health-damage) : (0);
     }
@@ -63,4 +67,9 @@ void Character::healthBarMaker() const {
 void Character::attack(Character& enemy){
     enemy.takeDamage(this->attkDamage);
     std::cout << "The " << this->name << " attacks the " << enemy.name << std::endl;
+}
+
+void Character::toggleBlock(){
+    std::cout << "You ready yourself for an attack." << std::endl;
+    isBlocking = !isBlocking;
 }
