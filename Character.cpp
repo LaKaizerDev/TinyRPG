@@ -46,7 +46,7 @@ bool Character::isAlive() const {
 }
 
 void Character::healthBarMaker() const {
-    int fullSection = (health/totalHealth)*10;
+    int fullSection = (static_cast<float>(health)/totalHealth)*10;
     int emptyStection = 10 - fullSection;
 
     std::cout << "  [";
