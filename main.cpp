@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Character.h"
+#include "Character/Character.h"
 
 int main(){
     Character Knight("Knight",200,25);
